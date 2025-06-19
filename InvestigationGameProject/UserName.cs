@@ -3,13 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace InvestigationGameProject
 {
     internal class UserName
     {
-        public static Dictionary<string,string> usersLevel = new Dictionary<string,string>(); 
-        
+        /// <summary>
+        /// A dictionary containing the username and the last agent who revealed,
+        /// (to determine the stage of the game).
+        /// </summary>
+        public static Dictionary<string,string> usersLevel = new Dictionary<string,string>();
+
+        /// <summary>
+        /// Gets a name from the user.
+        /// </summary>
+        /// <returns></returns>
         public string InputUserName()
         {
             string userName;
@@ -30,9 +39,6 @@ namespace InvestigationGameProject
             return userName;
         }
 
-
-
-
         /// <summary>
         /// If the user does not exist, adds it to the 'usersLevel' dictionary, 
         /// and prints greeting messages accordingly.
@@ -43,20 +49,34 @@ namespace InvestigationGameProject
         {
             if (usersLevel.ContainsKey(userName))
             {
-                Console.WriteLine($"Welcome back to the interrogation game {userName}!\n");
-
+                DisplayMessageWelcomeBack(userName);
             }
+
             else
             {
-                Console.WriteLine($"Welcome to the investigation game {userName}!\n");
+                DisplayMessageWelcome(userName);
+
                 usersLevel.Add(userName, null);
             }
 
-
         }
-      
+        private void DisplayMessageWelcome(string userName)
+        {
+            Console.WriteLine($"Welcome to the investigation game {userName}!\n");
+        }
 
-         
+        private void DisplayMessageWelcomeBack(string userName)
+        {
+            Console.WriteLine($"Welcome back to the interrogation game {userName}!\n");
+        }
+
+
+
+
+
+
+
+
 
 
 

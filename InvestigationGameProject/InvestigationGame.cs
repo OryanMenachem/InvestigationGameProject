@@ -68,7 +68,10 @@ namespace InvestigationGameProject
             }
         }
 
-        private void StartNewGame() { }
+        private void StartNewGame() 
+        {
+            new GameManager();
+        }
 
         private static void DisplayGameInstructions() 
         {
