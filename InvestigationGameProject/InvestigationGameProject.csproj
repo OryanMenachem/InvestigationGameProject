@@ -53,6 +53,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GeneralF\UserName.cs" />
+    <Compile Include="SensorsF\AudioSensor.cs" />
+    <Compile Include="SensorsF\LightSensor.cs" />
+    <Compile Include="SensorsF\MagneticSensor.cs" />
+    <Compile Include="SensorsF\MotionSensor.cs" />
+    <Compile Include="SensorsF\PulseSensor.cs" />
+    <Compile Include="SensorsF\SignalSensor.cs" />
+    <Compile Include="SensorsF\ThermalSensor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
