@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace InvestigationGameProject
 {
-    internal class Program
+    internal class GameManager
     {
-        static void Main()
-        {
-            new InvestigationGame().Start();
-        }
-
+        //private static int severalTurns = 0;
     }
 }
