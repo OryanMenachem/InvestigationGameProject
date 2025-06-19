@@ -68,7 +68,7 @@ namespace InvestigationGameProject
 
         private void DisplayMessageWelcomeBack(string userName)
         {
-            Console.Write("Welcome back to the interrogation game ");
+            Console.Write("Welcome back to the investigation game ");
             ConsoleDesign.CyanColor($"{userName}!\n");
         }
 
