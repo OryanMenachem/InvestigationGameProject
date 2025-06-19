@@ -10,7 +10,7 @@ namespace InvestigationGameProject
     internal class UserName
     {
         /// <summary>
-        /// A dictionary containing the username and the last agent who revealed,
+        /// A dictionary containing the username and the last agent who revealed
         /// (to determine the stage of the game).
         /// </summary>
         public static Dictionary<string,string> usersLevel = new Dictionary<string,string>();
@@ -29,7 +29,7 @@ namespace InvestigationGameProject
             {
                 userName = ConsoleDesign.Input();
 
-                if (userName == string.Empty) {break;}
+                if (userName != string.Empty) {break;}
 
                 ConsoleDesign.ErrorColor("Username not entered!\n");
             }
@@ -62,12 +62,14 @@ namespace InvestigationGameProject
         }
         private void DisplayMessageWelcome(string userName)
         {
-            Console.WriteLine($"Welcome to the investigation game {userName}!\n");
+            Console.Write("Welcome to the investigation game ");
+            ConsoleDesign.CyanColor($"{userName}!\n");
         }
 
         private void DisplayMessageWelcomeBack(string userName)
         {
-            Console.WriteLine($"Welcome back to the interrogation game {userName}!\n");
+            Console.Write("Welcome back to the interrogation game ");
+            ConsoleDesign.CyanColor($"{userName}!\n");
         }
 
 
