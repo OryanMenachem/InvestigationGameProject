@@ -10,8 +10,8 @@ namespace InvestigationGameProject
     {
         static void Main()
         {
-            InvestigationGame investigationGame = new InvestigationGame();
-            investigationGame.Start();
+            new InvestigationGame().Start();
         }
+
     }
 }
