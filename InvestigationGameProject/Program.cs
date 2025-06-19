@@ -8,8 +8,10 @@ namespace InvestigationGameProject
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            InvestigationGame investigationGame = new InvestigationGame();
+            investigationGame.Start();
         }
     }
 }
