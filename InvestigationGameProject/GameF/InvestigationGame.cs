@@ -8,12 +8,12 @@ namespace InvestigationGameProject
 {
     internal class InvestigationGame
     {
-        private bool Flag = true;
+        private bool flag = true;
         public void Start() 
         {
             DisplayGeneralMessageAboutGame();
 
-            while (Flag)
+            while (flag)
             {
                 DisplayMenu();
 
@@ -91,7 +91,7 @@ namespace InvestigationGameProject
             Console.Clear();
             Console.WriteLine();
             ConsoleDesign.CyanColor("Good bye!");
-            Flag = false;
+            flag = false;
         }
 
         private static void DisplayMessageWrongChoice()
