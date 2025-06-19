@@ -62,7 +62,7 @@ namespace InvestigationGameProject
                     ExitTheGame();
                     break;
                 default:
-                    DisplayMessageWrongChoice();
+                    DisplayIncorrectSelectionMessage();
                     break;
 
             }
@@ -94,7 +94,7 @@ namespace InvestigationGameProject
             flag = false;
         }
 
-        private static void DisplayMessageWrongChoice()
+        private static void DisplayIncorrectSelectionMessage()
         {
             ConsoleDesign.ErrorColor("No valid choice was made!\n");
         }

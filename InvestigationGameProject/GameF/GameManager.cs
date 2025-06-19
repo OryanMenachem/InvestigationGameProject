@@ -2,24 +2,128 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace InvestigationGameProject
 {
     internal class GameManager
     {
         private bool flag = false;
+
         private bool end = false;
+
+        private bool success = false;
+
         private string userName = new UserName().InputUserName();
+
         private readonly string[] levels = {"foot soldier", "squad leader", "senior commander", "organization leader" };
-    
+
         //private static int severalTurns = 0;
+
+
 
         public void Run()
         {
+            DisplayAgentDetails();
+
+            while (!end)
+            {
+                DisplaySensors();
+
+                InputSensor();
+
+                while (!flag)
+                {
+                    DisplaySensors();
+                    InputSensor();
+                }
+
+                Result();
+
+                if (success) { ContinueToTheNextLevel(); }
+              
+                
+            }
           
-           
         }
+           
+               
+
+
+        private void DisplayAgentDetails() 
+        {
+            //Console.Write("The agent to be interrogated is ");
+
+            //ConsoleDesign.CyanColor($"* {} * ", false);
+
+            //Console.Write("an Iranian agent of the rank of ");
+
+            //ConsoleDesign.CyanColor($"* {} *\n");
+        }
+        private static void DisplaySensors()
+        {
+
+            Console.WriteLine("Please attach one of the following sensors:\n\n" +
+                              "1. Audio Sensor\n" +
+                              "2. Thermal Sensor\n" +
+                              "3. pulse sensor\n" +
+                              "4. Motion Sensor\n" +
+                              "5. Magnetic Sensor\n" +
+                              "6. Signal Sensor\n" +
+                              "7. Light Sensor\n");
+
+
+        }
+
+        private void InputSensor()
+        { 
+
+            string sensor = ConsoleDesign.Input();
+
+            switch (sensor)
+            {
+                case "Audio Sensor":
+                    Console.WriteLine();
+                    break;
+                case "Thermal Sensor":
+                    Console.WriteLine();
+                    break;
+                case "pulse sensor":
+                    Console.WriteLine();
+                    break;
+                case "Motion Sensor":
+                    Console.WriteLine();
+                    break;
+                case " Magnetic Sensor":
+                    Console.WriteLine();
+                    break;
+                case "Signal Sensor":
+                    Console.WriteLine();
+                    break;
+                case "Light Sensor":
+                    Console.WriteLine();
+                    break;
+                default:
+                    SensorNotExist();
+                    break;
+
+            }
+        }
+        
+
         private void GetAgentAccordingUsersLevel() {}
+        private void Result() 
+        {
+            //success = true;
+        }
+        private void ContinueToTheNextLevel() { }
+
+        private void SensorNotExist() 
+        {
+            ConsoleDesign.ErrorColor("The sensor... does not exist!\n");
+            flag = true;
+        }
+
         
     }
 }
