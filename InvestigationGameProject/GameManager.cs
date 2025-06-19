@@ -8,6 +8,8 @@ namespace InvestigationGameProject
 {
     internal class GameManager
     {
+        private bool flag = false;
+        private bool end = false;
         //private static int severalTurns = 0;
     }
 }

@@ -9,8 +9,16 @@ namespace InvestigationGameProject
 {
     internal class UserName
     {
-        public static Dictionary<string,string> usersLevel = new Dictionary<string,string>(); 
-        
+        /// <summary>
+        /// A dictionary containing the username and the last agent who revealed,
+        /// (to determine the stage of the game).
+        /// </summary>
+        public static Dictionary<string,string> usersLevel = new Dictionary<string,string>();
+
+        /// <summary>
+        /// Gets a name from the user.
+        /// </summary>
+        /// <returns></returns>
         public string InputUserName()
         {
             string userName;
@@ -30,9 +38,6 @@ namespace InvestigationGameProject
 
             return userName;
         }
-
-
-
 
         /// <summary>
         /// If the user does not exist, adds it to the 'usersLevel' dictionary, 
@@ -54,8 +59,6 @@ namespace InvestigationGameProject
                 usersLevel.Add(userName, null);
             }
 
-
-
         }
         private void DisplayMessageWelcome(string userName)
         {
@@ -66,6 +69,11 @@ namespace InvestigationGameProject
         {
             Console.WriteLine($"Welcome back to the interrogation game {userName}!\n");
         }
+
+
+
+
+
 
 
 
