@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgentsF\FootSoldier.cs" />
+    <Compile Include="AgentsF\OrganizationLeader.cs" />
+    <Compile Include="AgentsF\SeniorCommander.cs" />
+    <Compile Include="AgentsF\SquadLeader.cs" />
     <Compile Include="GeneralF\ConsoleDesign.cs" />
     <Compile Include="GameF\GameManager.cs" />
     <Compile Include="GameF\InvestigationGame.cs" />
@@ -53,5 +57,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
