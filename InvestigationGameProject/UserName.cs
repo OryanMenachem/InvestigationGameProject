@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace InvestigationGameProject
 {
@@ -43,20 +44,31 @@ namespace InvestigationGameProject
         {
             if (usersLevel.ContainsKey(userName))
             {
-                Console.WriteLine($"Welcome back to the interrogation game {userName}!\n");
-
+                DisplayMessageWelcomeBack(userName);
             }
+
             else
             {
-                Console.WriteLine($"Welcome to the investigation game {userName}!\n");
+                DisplayMessageWelcome(userName);
+
                 usersLevel.Add(userName, null);
             }
 
 
-        }
-      
 
-         
+        }
+        private void DisplayMessageWelcome(string userName)
+        {
+            Console.WriteLine($"Welcome to the investigation game {userName}!\n");
+        }
+
+        private void DisplayMessageWelcomeBack(string userName)
+        {
+            Console.WriteLine($"Welcome back to the interrogation game {userName}!\n");
+        }
+
+
+
 
 
 
