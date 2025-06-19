@@ -43,12 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleDesign.cs" />
-    <Compile Include="GameManager.cs" />
-    <Compile Include="InvestigationGame.cs" />
+    <Compile Include="GeneralF\ConsoleDesign.cs" />
+    <Compile Include="GameF\GameManager.cs" />
+    <Compile Include="GameF\InvestigationGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserName.cs" />
+    <Compile Include="GeneralF\UserName.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

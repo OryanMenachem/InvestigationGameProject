@@ -70,7 +70,7 @@ namespace InvestigationGameProject
 
         private void StartNewGame() 
         {
-            new GameManager();
+            new GameManager().Run();
         }
 
         private static void DisplayGameInstructions() 
