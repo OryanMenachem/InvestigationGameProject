@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using InvestigationGameProject.AgentsF;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace InvestigationGameProject
@@ -14,9 +15,13 @@ namespace InvestigationGameProject
 
         private bool success = false;
 
-        private readonly string[] levels = {"foot soldier", "squad leader", "senior commander", "organization leader" };
+        private readonly string userName;
 
-        public  bool nextLevel = false;
+        private string currentLevel;
+
+        public bool nextLevel = false;
+
+        private BaseAgent iranianAgent;
 
         //private static int severalTurns = 0;
         
@@ -24,8 +29,14 @@ namespace InvestigationGameProject
 
 
 
+        public GameManager(string userName) { this.userName = userName; }
+
         public void Run()
         {
+            currentLevel = Users.GetLevel(userName);
+
+            InitializeIranianAgent();
+
             DisplayAgentDetails();
 
             while (!end)
@@ -48,19 +59,21 @@ namespace InvestigationGameProject
             }
           
         }
-           
-               
 
+        private void InitializeIranianAgent()
+        {
+            iranianAgent = new GetAgent().GetAgentByLevel(currentLevel);
+        }
 
         private void DisplayAgentDetails() 
         {
-            //Console.Write("The agent to be interrogated is ");
+            Console.Write("The agent to be interrogated is ");
 
-            //ConsoleDesign.CyanColor($"* {} * ", false);
+            ConsoleDesign.CyanColor($"* {iranianAgent.AgentName} * ", false);
 
-            //Console.Write("an Iranian agent of the rank of ");
+            Console.Write("an Iranian agent of the rank of ");
 
-            //ConsoleDesign.CyanColor($"* {} *\n");
+            ConsoleDesign.CyanColor($"* {iranianAgent.AgentRank} *\n");
         }
         private static void DisplaySensors()
         {
@@ -113,7 +126,7 @@ namespace InvestigationGameProject
         }
         
 
-        private void GetAgentAccordingUsersLevel() {}
+     
         private void Result() 
         {
             //success = true;

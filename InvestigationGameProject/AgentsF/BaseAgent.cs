@@ -9,12 +9,12 @@ namespace InvestigationGameProject.AgentsF
     internal class BaseAgent
     {
         public static readonly string[] Sensortypes = {"Audio Sensor",
-                                                "Thermal Sensor",
-                                                "pulse sensor",
-                                                "Motion Sensor", 
-                                                "Magnetic Sensor",
-                                                "Signal Sensor", 
-                                                "Light Sensor"}; 
+                                                       "Thermal Sensor",
+                                                       "pulse sensor",
+                                                       "Motion Sensor", 
+                                                       "Magnetic Sensor",
+                                                       "Signal Sensor", 
+                                                       "Light Sensor"}; 
         public virtual string AgentName { get; set; }
         public virtual string AgentRank {  get; set; }
 

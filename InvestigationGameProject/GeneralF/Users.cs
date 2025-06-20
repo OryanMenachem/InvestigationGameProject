@@ -7,8 +7,9 @@ using System.Xml.Linq;
 
 namespace InvestigationGameProject
 {
-    internal class UserName
+    internal class Users
     {
+        private static readonly string[] levels = { "foot soldier", "squad leader", "senior commander", "organization leader" };
         /// <summary>
         /// A dictionary containing the username and the last agent who revealed
         /// (to determine the stage of the game).
@@ -37,6 +38,16 @@ namespace InvestigationGameProject
             ExistingUser(userName);
 
             return userName;
+        }
+
+        public static string GetLevel(string userName)
+        {
+            int index = Array.IndexOf(levels, usersLevel[userName]) + 1;
+
+            //if (index <= levels.Length) { }
+            
+            return levels[index];
+
         }
 
         /// <summary>
