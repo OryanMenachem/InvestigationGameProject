@@ -56,7 +56,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GeneralF\Users.cs" />
+    <Compile Include="SensorsF\AgentSensorInterface.cs" />
     <Compile Include="SensorsF\AudioSensor.cs" />
+    <Compile Include="SensorsF\BaseSensor.cs" />
     <Compile Include="SensorsF\LightSensor.cs" />
     <Compile Include="SensorsF\MagneticSensor.cs" />
     <Compile Include="SensorsF\MotionSensor.cs" />

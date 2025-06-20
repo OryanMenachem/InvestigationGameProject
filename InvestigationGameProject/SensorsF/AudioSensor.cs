@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace InvestigationGameProject.SensorsF
 {
-    internal class AudioSensor
+    internal class AudioSensor : BaseSensor
     {
+        public override string SensorType { get; set; } = "Audio Sensor";
+
+
     }
 }

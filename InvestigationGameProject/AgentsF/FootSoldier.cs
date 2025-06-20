@@ -14,7 +14,7 @@ namespace InvestigationGameProject.GameF
 
         public override List<string> SensitiveToSensors { get; set; } = new List<string> {Sensortypes[0], Sensortypes[0] };
 
-        public override List<string> AttachedSensors { get; set; } = new List<string> {null, null };
+        public override List<string> AttachedSensors { get; set; } = new List<string> {null, null};
 
 
     }
