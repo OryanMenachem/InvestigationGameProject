@@ -9,22 +9,18 @@ namespace InvestigationGameProject.AgentsF
     internal class IranianAgentNameGenerator
     {
 
-        public string FullName()
+        public string GetFullName()
         {
            
 
-            string fullName = FirstName(new Random().Next(0, 20)) + " " +
-                              LastName(new Random().Next(0, 20));
+            string fullName = FirstNames(new Random().Next(0, 20)) + " " +
+                              LastNames(new Random().Next(0, 20));
 
             return fullName;
 
 
         }
-
-
-
-
-        private string FirstName(int rand)
+        private static string FirstNames(int rand)
         {
 
             string[] firstName = {
@@ -35,8 +31,7 @@ namespace InvestigationGameProject.AgentsF
 
             return firstName[rand];
         }
-
-        private string LastName(int rand)
+        private static string LastNames(int rand)
         {
 
             string[] lastName = {
@@ -48,5 +43,10 @@ namespace InvestigationGameProject.AgentsF
             return lastName[rand];
 
         }
+
     }
 }
+
+
+
+

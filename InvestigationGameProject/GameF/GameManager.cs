@@ -14,11 +14,13 @@ namespace InvestigationGameProject
 
         private bool success = false;
 
-        private string userName = new UserName().InputUserName();
-
         private readonly string[] levels = {"foot soldier", "squad leader", "senior commander", "organization leader" };
 
+        public  bool nextLevel = false;
+
         //private static int severalTurns = 0;
+        
+
 
 
 
@@ -128,23 +130,23 @@ namespace InvestigationGameProject
                 choice = ConsoleDesign.Input();
             }
 
-            if (choice == "yes")
-            {
+            if (choice == "yes") { nextLevel = true; }
 
-            }
-            else if (choice == "no") 
-            {
-                end = true;
-            }
+            end = true;
 
         }
-
         private void SensorNotExist() 
         {
-            ConsoleDesign.ErrorColor("The sensor... does not exist!\n");
+            ConsoleDesign.ErrorColor("The inserted sensor does not exist!\n");
             flag = true;
         }
 
-        
+
     }
 }
+          
+            
+
+
+
+        
