@@ -72,15 +72,15 @@ namespace InvestigationGameProject
 
         private void StartNewGame() 
         {
-            userName = new UserName().InputUserName();
+            userName = new Users().InputUserName();
 
-            GameManager newGame = new GameManager();
+            GameManager newGame = new GameManager(userName);
             newGame.Run();
 
 
             while (newGame.nextLevel)
             {
-                newGame = new GameManager();
+                newGame = new GameManager(userName);
                 newGame.Run();
             }
         }
