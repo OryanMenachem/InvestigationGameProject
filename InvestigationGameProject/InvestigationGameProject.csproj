@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgentsF\BaseAgent.cs" />
     <Compile Include="AgentsF\FootSoldier.cs" />
     <Compile Include="AgentsF\IranianAgentNameGenerator.cs" />
     <Compile Include="AgentsF\OrganizationLeader.cs" />
