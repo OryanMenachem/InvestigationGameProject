@@ -116,7 +116,28 @@ namespace InvestigationGameProject
         {
             //success = true;
         }
-        private void ContinueToTheNextLevel() { }
+        private void ContinueToTheNextLevel() 
+        {
+            Console.WriteLine("Would you like to continue to the next level? (yes / no)\n");
+
+            string choice = ConsoleDesign.Input();
+
+            while (choice != "yes" || choice != "no")
+            {
+                ConsoleDesign.ErrorColor("No valid selection was entered!\n");
+                choice = ConsoleDesign.Input();
+            }
+
+            if (choice == "yes")
+            {
+
+            }
+            else if (choice == "no") 
+            {
+                end = true;
+            }
+
+        }
 
         private void SensorNotExist() 
         {
