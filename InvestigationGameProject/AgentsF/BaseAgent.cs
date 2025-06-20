@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -37,10 +38,51 @@ namespace InvestigationGameProject.AgentsF
             }
 
             return index;
+        }
 
+        public bool SensorsWereExposed()
+        {
+            int remainingSensors = 0;
+
+            int sensitiveSensors = SensitiveToSensors.Count;
+
+            for (int i = 0; i < sensitiveSensors;  ++i)
+            {
+                if (SensitiveToSensors[i] == AttachedSensors[i]) 
+                { remainingSensors++; }
+
+            }
+
+            if (remainingSensors == sensitiveSensors)
+            {
+                DisplaySuccessMessage();
+                return true;
+            }
+
+            DisplayNumberOfExposedSensors(remainingSensors, sensitiveSensors);
+
+            return false;
 
 
         }
+
+        
+
+        private void DisplaySuccessMessage()
+        {
+           ConsoleDesign.CyanColor("Congratulations! ",false);
+           Console.WriteLine("You have successfully exposed all the sensors.\n");
+        }
+
+        private void DisplayNumberOfExposedSensors(int remainingSensors, int sensitiveSensors)
+        {
+            ConsoleDesign.CyanColor($"{remainingSensors} ", false);
+            Console.Write("out of ");
+            ConsoleDesign.CyanColor($"{sensitiveSensors} ", false);
+            Console.WriteLine("sensors exposed\n");
+        }
+
+
 
     }
 }

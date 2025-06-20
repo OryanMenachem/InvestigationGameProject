@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using InvestigationGameProject.AgentsF;
+using InvestigationGameProject.SensorsF;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace InvestigationGameProject
@@ -98,7 +99,7 @@ namespace InvestigationGameProject
             switch (sensor)
             {
                 case "Audio Sensor":
-                    Console.WriteLine();
+                    new AudioSensor().Activate(iranianAgent);
                     break;
                 case "Thermal Sensor":
                     Console.WriteLine();
