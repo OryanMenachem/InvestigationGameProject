@@ -9,6 +9,8 @@ namespace InvestigationGameProject
     internal class InvestigationGame
     {
         private bool flag = true;
+
+        private string userName = string.Empty;
         public void Start() 
         {
             DisplayGeneralMessageAboutGame();
@@ -70,7 +72,17 @@ namespace InvestigationGameProject
 
         private void StartNewGame() 
         {
-            new GameManager().Run();
+            userName = new UserName().InputUserName();
+
+            GameManager newGame = new GameManager();
+            newGame.Run();
+
+
+            while (newGame.nextLevel)
+            {
+                newGame = new GameManager();
+                newGame.Run();
+            }
         }
 
         private static void DisplayGameInstructions() 
