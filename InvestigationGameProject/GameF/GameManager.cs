@@ -46,13 +46,15 @@ namespace InvestigationGameProject
 
                 InputSensor();
 
-                while (!flag)
+                while (flag)
                 {
+                    flag = false;
+
                     DisplaySensors();
                     InputSensor();
                 }
 
-                Result();
+                //Result();
 
                 if (success) { ContinueToTheNextLevel(); }
               
@@ -99,7 +101,7 @@ namespace InvestigationGameProject
             switch (sensor)
             {
                 case "Audio Sensor":
-                    new AudioSensor().Activate(iranianAgent);
+                    success = new AudioSensor().Activate(iranianAgent);
                     break;
                 case "Thermal Sensor":
                     Console.WriteLine();
@@ -128,18 +130,19 @@ namespace InvestigationGameProject
         
 
      
-        private void Result() 
-        {
-            //success = true;
-        }
+        //private void Result() 
+        //{
+
+        //}
         private void ContinueToTheNextLevel() 
         {
             Console.WriteLine("Would you like to continue to the next level? (yes / no)\n");
 
             string choice = ConsoleDesign.Input();
 
-            while (choice != "yes" || choice != "no")
+            while (true)
             {
+                if (choice == "yes" || choice == "no") { break; }
                 ConsoleDesign.ErrorColor("No valid selection was entered!\n");
                 choice = ConsoleDesign.Input();
             }

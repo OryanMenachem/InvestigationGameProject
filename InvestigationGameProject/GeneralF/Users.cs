@@ -9,7 +9,7 @@ namespace InvestigationGameProject
 {
     internal class Users
     {
-        private static readonly string[] levels = { "foot soldier", "squad leader", "senior commander", "organization leader" };
+        private static readonly string[] levels = { "Foot Soldier", "Squad Leader", "Senior Commander", "Organization Leader" };
         /// <summary>
         /// A dictionary containing the username and the last agent who revealed
         /// (to determine the stage of the game).
@@ -74,14 +74,14 @@ namespace InvestigationGameProject
         private void DisplayMessageWelcome(string userName)
         {
             Console.Write("Welcome to the investigation game ");
-            ConsoleDesign.CyanColor($"{userName} ",false);
+            ConsoleDesign.CyanColor($"{userName}",false);
             Console.WriteLine("!\n");
         }
 
         private void DisplayMessageWelcomeBack(string userName)
         {
             Console.Write("Welcome back to the investigation game ");
-            ConsoleDesign.CyanColor($"{userName} ",false);
+            ConsoleDesign.CyanColor($"{userName}",false);
             Console.WriteLine("!\n");
         }
 

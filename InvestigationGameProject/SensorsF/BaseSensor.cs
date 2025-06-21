@@ -12,11 +12,11 @@ namespace InvestigationGameProject.SensorsF
 
         public virtual string SensorType { get; set; }
 
-        public virtual void Activate(BaseAgent agent)
+        public virtual bool Activate(BaseAgent agent)
         {
             ConsoleDesign.CyanColor($"{SensorType} action...\n");
 
-            new AgentSensorInterface().Interaction(SensorType, agent);
+            return new AgentSensorInterface().Interaction(SensorType, agent);
         }
 
 
