@@ -73,14 +73,16 @@ namespace InvestigationGameProject
         }
         private void DisplayMessageWelcome(string userName)
         {
-            Console.Write("Welcome to the investigation game ");
+            ConsoleDesign.CyanColor("Welcome ", false);
+            Console.Write("to the investigation game ");
             ConsoleDesign.CyanColor($"{userName}",false);
             Console.WriteLine("!\n");
         }
 
         private void DisplayMessageWelcomeBack(string userName)
         {
-            Console.Write("Welcome back to the investigation game ");
+            ConsoleDesign.CyanColor("Welcome back ", false);
+            Console.Write("to the investigation game ");
             ConsoleDesign.CyanColor($"{userName}",false);
             Console.WriteLine("!\n");
         }

@@ -24,8 +24,8 @@ namespace InvestigationGameProject
 
         private BaseAgent iranianAgent;
 
-        //private static int severalTurns = 0;
-        
+        private static int severalTurns = 0;
+
 
 
 
@@ -53,8 +53,6 @@ namespace InvestigationGameProject
                     DisplaySensors();
                     InputSensor();
                 }
-
-                //Result();
 
                 if (success) { ContinueToTheNextLevel(); }
               
@@ -94,8 +92,9 @@ namespace InvestigationGameProject
         }
 
         private void InputSensor()
-        { 
-
+        {
+        
+            
             string sensor = ConsoleDesign.Input();
 
             switch (sensor)
@@ -130,10 +129,7 @@ namespace InvestigationGameProject
         
 
      
-        //private void Result() 
-        //{
 
-        //}
         private void ContinueToTheNextLevel() 
         {
             Console.WriteLine("Would you like to continue to the next level? (yes / no)\n");

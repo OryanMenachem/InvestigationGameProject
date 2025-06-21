@@ -76,9 +76,9 @@ namespace InvestigationGameProject.AgentsF
 
         private void DisplayNumberOfExposedSensors(int remainingSensors, int sensitiveSensors)
         {
-            ConsoleDesign.CyanColor($"{remainingSensors} ", false);
+            ConsoleDesign.CyanColor($"{remainingSensors}", false);
             Console.Write("out of ");
-            ConsoleDesign.CyanColor($"{sensitiveSensors} ", false);
+            ConsoleDesign.CyanColor($"{sensitiveSensors}", false);
             Console.WriteLine("sensors exposed\n");
         }
 
