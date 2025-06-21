@@ -13,17 +13,17 @@ namespace InvestigationGameProject.AgentsF
         {
             switch (level)
             {
-                case "foot soldier":
+                case "Foot Soldier":
                     return new FootSoldier();
 
-                case "squad leader":
-                    return new FootSoldier();
+                case "Squad Leader":
+                    return new SquadLeader();
 
-                case "senior commander":
-                    return new FootSoldier();
+                case "Senior Commander":
+                    return new SeniorCommander();
 
-                case "organization leader":
-                    return new FootSoldier();
+                case "Organization Leader":
+                    return new OrganizationLeader();
 
                 default:
                     ConsoleDesign.ErrorColor("Level does not exist!\n");

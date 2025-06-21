@@ -10,7 +10,7 @@ namespace InvestigationGameProject.GameF
     internal class FootSoldier : BaseAgent
     {
         public override string AgentName { get; set; } = new IranianAgentNameGenerator().GetFullName();
-        public override string AgentRank { get; set; } = "foot soldier";
+        public override string AgentRank { get; set; } = "Foot Soldier";
 
         public override List<string> SensitiveToSensors { get; set; } = new List<string> {Sensortypes[0], Sensortypes[0] };
 

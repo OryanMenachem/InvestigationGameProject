@@ -18,9 +18,9 @@ namespace InvestigationGameProject.SensorsF
 
             agent.AttachedSensors[index] = sensorType;
 
-            agent.SensorsWereExposed();
 
-            return true;
+
+            return agent.SensorsWereExposed();
 
         }
 

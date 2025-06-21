@@ -43,13 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgentsF\BaseAgent.cs" />
-    <Compile Include="AgentsF\FootSoldier.cs" />
+    <Compile Include="AgentsF\AgentTypesF\BaseAgent.cs" />
+    <Compile Include="AgentsF\AgentTypesF\FootSoldier.cs" />
     <Compile Include="AgentsF\GetAgent.cs" />
     <Compile Include="AgentsF\IranianAgentNameGenerator.cs" />
-    <Compile Include="AgentsF\OrganizationLeader.cs" />
-    <Compile Include="AgentsF\SeniorCommander.cs" />
-    <Compile Include="AgentsF\SquadLeader.cs" />
+    <Compile Include="AgentsF\AgentTypesF\OrganizationLeader.cs" />
+    <Compile Include="AgentsF\AgentTypesF\SeniorCommander.cs" />
+    <Compile Include="AgentsF\AgentTypesF\SquadLeader.cs" />
     <Compile Include="GeneralF\ConsoleDesign.cs" />
     <Compile Include="GameF\GameManager.cs" />
     <Compile Include="GameF\InvestigationGame.cs" />
