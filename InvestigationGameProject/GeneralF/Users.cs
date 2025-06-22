@@ -40,15 +40,23 @@ namespace InvestigationGameProject
             return userName;
         }
 
-        public static string GetLevel(string userName)
+        public string GetLevel(string userName)
         {
+         
+
             int index = Array.IndexOf(levels, usersLevel[userName]) + 1;
 
-            //if (index <= levels.Length) { }
-            
-            return levels[index];
+            if (index >= levels.Length) { return "end"; }
+
+            usersLevel[userName] = levels[index];
+
+           
+            return levels[index];  
 
         }
+           
+
+
 
         /// <summary>
         /// If the user does not exist, adds it to the 'usersLevel' dictionary, 

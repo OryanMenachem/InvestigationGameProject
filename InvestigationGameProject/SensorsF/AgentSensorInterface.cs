@@ -10,7 +10,7 @@ namespace InvestigationGameProject.SensorsF
     internal class AgentSensorInterface
     {
 
-        public bool Interaction(string sensorType, BaseAgent agent)
+        public bool Interaction(string sensorType, BaseAgent agent, int severalTurns)
         {
             int index = agent.AgentIsSensitive(sensorType);
 
@@ -18,7 +18,7 @@ namespace InvestigationGameProject.SensorsF
 
             agent.AttachedSensors[index] = sensorType;
 
-
+            agent.CounterStrike(severalTurns);
 
             return agent.SensorsWereExposed();
 
