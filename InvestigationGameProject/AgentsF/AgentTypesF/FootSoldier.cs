@@ -16,6 +16,8 @@ namespace InvestigationGameProject.GameF
 
         public override List<string> AttachedSensors { get; set; } = new List<string> {null, null};
 
+        public override void CounterStrike(int severalTurns) { }
+
 
     }
 }

@@ -40,15 +40,23 @@ namespace InvestigationGameProject
             return userName;
         }
 
-        public static string GetLevel(string userName)
+        public string GetLevel(string userName)
         {
+         
+
             int index = Array.IndexOf(levels, usersLevel[userName]) + 1;
 
-            //if (index <= levels.Length) { }
-            
-            return levels[index];
+            if (index >= levels.Length) { return "end"; }
+
+            usersLevel[userName] = levels[index];
+
+           
+            return levels[index];  
 
         }
+           
+
+
 
         /// <summary>
         /// If the user does not exist, adds it to the 'usersLevel' dictionary, 
@@ -73,14 +81,16 @@ namespace InvestigationGameProject
         }
         private void DisplayMessageWelcome(string userName)
         {
-            Console.Write("Welcome to the investigation game ");
+            ConsoleDesign.CyanColor("Welcome ", false);
+            Console.Write("to the investigation game ");
             ConsoleDesign.CyanColor($"{userName}",false);
             Console.WriteLine("!\n");
         }
 
         private void DisplayMessageWelcomeBack(string userName)
         {
-            Console.Write("Welcome back to the investigation game ");
+            ConsoleDesign.CyanColor("Welcome back ", false);
+            Console.Write("to the investigation game ");
             ConsoleDesign.CyanColor($"{userName}",false);
             Console.WriteLine("!\n");
         }

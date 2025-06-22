@@ -66,7 +66,21 @@ namespace InvestigationGameProject.AgentsF
 
         }
 
-        
+        public virtual void CounterStrike(int severalTurns)
+        {
+            int index = new Random().Next(0, AttachedSensors.Count);
+
+            if (severalTurns % 3 == 0)
+            {
+                AttachedSensors[index] = null;
+                ConsoleDesign.RedColor("Attack: ",false);
+                Console.WriteLine("Sensor 1 removed!\n");
+            }
+
+        }
+
+
+
 
         private void DisplaySuccessMessage()
         {
@@ -76,9 +90,9 @@ namespace InvestigationGameProject.AgentsF
 
         private void DisplayNumberOfExposedSensors(int remainingSensors, int sensitiveSensors)
         {
-            ConsoleDesign.CyanColor($"{remainingSensors} ", false);
+            ConsoleDesign.CyanColor($"{remainingSensors}", false);
             Console.Write("out of ");
-            ConsoleDesign.CyanColor($"{sensitiveSensors} ", false);
+            ConsoleDesign.CyanColor($"{sensitiveSensors}", false);
             Console.WriteLine("sensors exposed\n");
         }
 

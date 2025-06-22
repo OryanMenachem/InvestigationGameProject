@@ -41,10 +41,10 @@ namespace InvestigationGameProject
 
             ConsoleDesign.CyanColor("Please select one of the following options:\n");
 
-            ConsoleDesign.CyanColor("\n******* MENU **********");
-            ConsoleDesign.CyanColor("\n* 1. new game.        *");
+            ConsoleDesign.CyanColor("\n******** MENU *********");
+            ConsoleDesign.CyanColor("\n* 1. new game         *");
             ConsoleDesign.CyanColor("\n* 2. instructions     *");
-            ConsoleDesign.CyanColor("\n* 3. exit.            *");
+            ConsoleDesign.CyanColor("\n* 3. exit             *");
             ConsoleDesign.CyanColor("\n***********************");
         }
 

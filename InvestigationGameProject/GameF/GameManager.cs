@@ -24,8 +24,8 @@ namespace InvestigationGameProject
 
         private BaseAgent iranianAgent;
 
-        //private static int severalTurns = 0;
-        
+        private static int severalTurns = 0;
+
 
 
 
@@ -34,7 +34,9 @@ namespace InvestigationGameProject
 
         public void Run()
         {
-            currentLevel = Users.GetLevel(userName);
+            currentLevel = new Users().GetLevel(userName);
+
+            if (Victory(currentLevel)) { return; }
 
             InitializeIranianAgent();
 
@@ -53,8 +55,6 @@ namespace InvestigationGameProject
                     DisplaySensors();
                     InputSensor();
                 }
-
-                //Result();
 
                 if (success) { ContinueToTheNextLevel(); }
               
@@ -94,14 +94,17 @@ namespace InvestigationGameProject
         }
 
         private void InputSensor()
-        { 
+        {
+            severalTurns += 1; 
+
+
 
             string sensor = ConsoleDesign.Input();
 
             switch (sensor)
             {
                 case "Audio Sensor":
-                    success = new AudioSensor().Activate(iranianAgent);
+                    success = new AudioSensor().Activate(iranianAgent, severalTurns);
                     break;
                 case "Thermal Sensor":
                     Console.WriteLine();
@@ -122,6 +125,7 @@ namespace InvestigationGameProject
                     Console.WriteLine();
                     break;
                 default:
+                    severalTurns -= 1;
                     SensorNotExist();
                     break;
 
@@ -130,10 +134,7 @@ namespace InvestigationGameProject
         
 
      
-        //private void Result() 
-        //{
 
-        //}
         private void ContinueToTheNextLevel() 
         {
             Console.WriteLine("Would you like to continue to the next level? (yes / no)\n");
@@ -159,6 +160,25 @@ namespace InvestigationGameProject
         }
 
 
+        private bool Victory(string currentLevel)
+        {
+            if (currentLevel != "end") { return false; }
+
+            nextLevel = false;
+
+            Users.usersLevel[userName] = null;
+
+            ConsoleDesign.CyanColor("Congratulations! ", false);
+            Console.Write("you managed to expose ");
+            ConsoleDesign.CyanColor("all the agents.\n");
+
+            Console.WriteLine("Press Enter to continue...\n");
+            ConsoleDesign.Input();
+
+            return true;
+         
+
+        }
     }
 }
           
